@@ -14,7 +14,7 @@ public class Day1
         {
             dialValue += operations[i];
             int hundredVal = dialValue / 100; // We need the truncating effect of int
-            dialValue -= hundredVal * 100; // Works with negative numbers as well (but why?)
+            dialValue -= hundredVal * 100;
             
             if (dialValue == 0)
             {
@@ -52,7 +52,7 @@ public class Day1
             
             clicks += Math.Abs(clicksThisIteration);
             
-            if (dialValue == 0) // The && hundredVal should correct for landing on 0 exactly (it doesn't)
+            if (dialValue == 0)
             {
                 clicks++;
             }
