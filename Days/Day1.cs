@@ -27,6 +27,7 @@ public class Day1
 
     private void SolvePartTwoAlt()
     {
+        // I can't be bothered debugging this...
         int dialValue = 50;
         int clicks = 0;
         for (int i = 0; i < operations.Count; i++)
@@ -73,7 +74,6 @@ public class Day1
             }
             
             // WTF is going on? Use ultra-brute force for now
-            // I'm really not sure why my past solutions refused to work for this problem
             for (int j = 0; j < Math.Abs(operations[i]); j++)
             {
                 dialValue += val;
