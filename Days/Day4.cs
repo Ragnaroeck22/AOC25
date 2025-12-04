@@ -15,19 +15,8 @@ public class Day4
                 char c = map[y][x];
                 if (c == '.')
                     continue;
-
-                int adjacentRolls = 0;
-                // Can definitely be done easier, but this does the job
-                adjacentRolls += PositionIsRoll(x - 1, y - 1) ? 1 : 0; // TL
-                adjacentRolls += PositionIsRoll(x, y - 1) ? 1 : 0; // TC
-                adjacentRolls += PositionIsRoll(x + 1, y - 1) ? 1 : 0; // TR
-                adjacentRolls += PositionIsRoll(x + 1, y) ? 1 : 0; // CR
-                adjacentRolls += PositionIsRoll(x + 1, y + 1) ? 1 : 0; // BR
-                adjacentRolls += PositionIsRoll(x, y + 1) ? 1 : 0; // BC
-                adjacentRolls += PositionIsRoll(x - 1, y + 1) ? 1 : 0; // BL
-                adjacentRolls += PositionIsRoll(x - 1, y) ? 1 : 0; // CL
                 
-                if (adjacentRolls < 4)
+                if (GetRollMovable(x, y))
                     rollsMovable++;
             }
         }
