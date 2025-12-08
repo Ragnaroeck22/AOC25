@@ -1,4 +1,4 @@
 ﻿using AOC25.Days;
 
-Day6 day = new();
+Day7 day = new();
 day.Solve();
