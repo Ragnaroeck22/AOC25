@@ -18,7 +18,7 @@ public class Day6
             long solution = numbers[i][0];
             for (int j = 1; j < numbers[i].Count; j++)
             {
-                Console.Write($"{solution} {op} {numbers[i][j]} = ");
+                //Console.Write($"{solution} {op} {numbers[i][j]} = ");
                 switch (op)
                 {
                     case '+':
@@ -28,12 +28,9 @@ public class Day6
                         solution *= numbers[i][j];
                         break;
                 }
-                Console.Write(solution + "\n");
+                //Console.Write(solution + "\n");
             }
             sum += solution;
-
-            if (i > 7)
-                break;
         }
         Console.WriteLine($"Part 1: {sum}");
     }
@@ -45,10 +42,14 @@ public class Day6
         var matchesOperators = Regex.Matches(input, @"[+*]+");
         
         // Initialize width
-        for (int i = 0; i < input.Split("\r\n").Length; i++)
+        var cut = input.Split("\r\n");
+        int width = Regex.Matches(cut[0], @"[\d]+").Count;
+        for (int i = 0; i < width; i++)
         {
             numbers.Add(new ());
         }
+        
+        //Console.WriteLine($"Width: {numbers.Count}");
         
         for (int i = 0; i < matchesDigits.Count; i++)
         {
