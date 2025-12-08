@@ -37,6 +37,8 @@ public class Day6
     private void ParseInputPartTwo()
     {
         // I hate this
+        // This only works with the actual input, not the example
+        // I'm too lazy to do it dynamically
         var input = FileUtils.GetInputText(6);
         
         var lines = input.Split("\r\n");
